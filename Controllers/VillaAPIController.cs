@@ -10,6 +10,13 @@ namespace MagicVilla_VillaApi.Controllers
     [ApiController]
     public class VillaAPIController : ControllerBase
     {
+        private readonly ApplicatonDbcontext _applicatonDbcontext;
+
+        public VillaAPIController(ApplicatonDbcontext applicatonDbcontext)
+        {
+            _applicatonDbcontext = applicatonDbcontext;
+        }
+
         private readonly ILogger<VillaAPIController> logger;
         //everything will takecare by DI
         public VillaAPIController(ILogger<VillaAPIController> _logger)
@@ -21,7 +28,10 @@ namespace MagicVilla_VillaApi.Controllers
         public ActionResult<IEnumerable<VillaDTO>> GetVillas()
         {
             //logger.LogInformation("Retrive the all Villas information");
-            return Ok(VillaStore.villaList);
+            //return Ok(VillaStore.villaList);
+            //setting from the local DB
+            //_applicatonDbcontext.SavingChanges() to save the changes to DB
+            return Ok(_applicatonDbcontext.Villas.ToList());
         }
 
         [HttpGet("GetVillasBy" + "{id:int}", Name = "GetVilla")]
