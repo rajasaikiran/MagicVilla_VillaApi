@@ -17,13 +17,33 @@ namespace MagicVilla_VillaApi.Data
                 new Villa()
                 {
                     Id = 1,
-                    Name = "Test",
+                    Name = "First Villa",
                     Description = "Connection was successfully established with the server, but then an error occurred duri",
                     ImageUrl = "Dummy",
-                    Occupency = 10,
-                    Rate = 102125,
-                    Sqft= 1024
-                }
+                    Occupency = 130,
+                    Rate = 104342125,
+                     Sqft = 1024
+                },
+                   new Villa()
+                   {
+                       Id = 2,
+                       Name = "Second Villa",
+                       Description = "Connection was successfully established with the server, but then an error occurred duri",
+                       ImageUrl = "Dummy",
+                       Occupency = 1430,
+                       Rate = 104342125,
+                       Sqft = 1024
+                   },
+                          new Villa()
+                          {
+                              Id = 3,
+                              Name = "Third Villa",
+                              Description = "Connection was successfully established with the server, but then an error occurred duri",
+                              ImageUrl = "Dummy",
+                              Occupency = 1530,
+                              Rate = 1742125,
+                              Sqft = 1024
+                          }
                 );
 
          }

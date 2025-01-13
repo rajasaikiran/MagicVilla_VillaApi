@@ -60,9 +60,29 @@ namespace MagicVilla_VillaApi.Migrations
                             Id = 1,
                             Description = "Connection was successfully established with the server, but then an error occurred duri",
                             ImageUrl = "Dummy",
-                            Name = "Test",
-                            Occupency = 10,
-                            Rate = 102125.0,
+                            Name = "First Villa",
+                            Occupency = 130,
+                            Rate = 104342125.0,
+                            Sqft = 1024
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Connection was successfully established with the server, but then an error occurred duri",
+                            ImageUrl = "Dummy",
+                            Name = "Second Villa",
+                            Occupency = 1430,
+                            Rate = 104342125.0,
+                            Sqft = 1024
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Connection was successfully established with the server, but then an error occurred duri",
+                            ImageUrl = "Dummy",
+                            Name = "Third Villa",
+                            Occupency = 1530,
+                            Rate = 1742125.0,
                             Sqft = 1024
                         });
                 });

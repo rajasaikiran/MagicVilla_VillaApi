@@ -9,11 +9,9 @@ namespace MagicVilla_VillaApi.Models.Dto
         [MaxLength(30)]
         public string? Name { get; set; }
 
-        public int sqft { get; set; }
+        public int Sqft { get; set; }
 
-        public int occupency { get; set; }
-
-        public DateTime CreatedDate { get; set; }
+        public int Occupency { get; set; }
 
         public string? ImageUrl { get; set; }
     }

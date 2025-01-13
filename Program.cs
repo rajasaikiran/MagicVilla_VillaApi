@@ -9,10 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 Log.Logger = new LoggerConfiguration().MinimumLevel.Debug().WriteTo.
     File("log/VillaLogs.txt", rollingInterval: RollingInterval.Day).CreateLogger();
 builder.Host.UseSerilog();
-builder.Services.AddDbContext<ApplicatonDbcontext>(options => {
+builder.Services.AddDbContext<ApplicatonDbcontext>(options =>
+{
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLconnection"));
 });
- 
+//Register the service in the container
+//builder.Services.AddTransient<ILogging, ILogging>();
 builder.Services.AddControllers(options =>{
     //options.ReturnHttpNotAcceptable = true;
 }).AddNewtonsoftJson();
